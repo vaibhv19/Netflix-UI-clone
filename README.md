@@ -6,15 +6,15 @@ This is a static clone of Netflix's homepage, created using HTML and CSS for lea
 
 Netflix UI clone/
 
-├── assets/
+ ├── assets/
 
       └── images/
       
          └── background.jpg
          
-├── index.html
+ ├── index.html
 
-├── style.css  
+ ├── style.css  
 
 
 ✨ Features
