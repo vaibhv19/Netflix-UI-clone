@@ -1,86 +1,58 @@
-# 🎬 Netflix UI Clone
+# StreamVerse UI Clone
 
-Developed a responsive **Netflix-inspired landing page** using **HTML and CSS**, focusing on pixel-perfect design, layout structuring, and modern UI practices.
+A modern, multi-page streaming-inspired web UI built with HTML, CSS, and vanilla JavaScript. This project started as a static Netflix-style landing page and has been upgraded into a more dynamic experience with a browse page, a featured watch page, and responsive styling.
 
----
+## Features
 
-## 🚀 Project Overview
+- Responsive landing page with a polished hero section
+- Browse page with searchable movie cards
+- Dynamic watch page that updates based on the selected title
+- Sticky navigation and a cohesive streaming-style visual design
+- Lightweight setup with no framework required
 
-This project replicates the core visual structure of Netflix’s homepage, including the hero section, feature highlights, and footer.
+## Tech Stack
 
-The objective was to strengthen frontend fundamentals by building a real-world UI without relying on frameworks or JavaScript.
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
----
-
-## 🧠 Key Highlights
-
-* Built a **fully responsive layout** using Flexbox and CSS Grid
-* Implemented **modern UI design patterns** and section-based structuring
-* Designed a **pixel-accurate hero section** with background overlays
-* Applied **clean CSS architecture** for maintainability
-* Focused on **semantic HTML and accessibility basics**
-
----
-
-## 🛠️ Tech Stack
-
-* **HTML5**
-* **CSS3**
-* **Flexbox**
-* **CSS Grid**
-* **Media Queries**
-
----
-
-## ⚙️ Core Features
-
-* Hero section with call-to-action
-* Responsive navigation bar
-* Multiple content sections (TV, Mobile, Kids)
-* Structured footer with links
-* Fully responsive across devices
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```bash
 Netflix-UI-Clone/
-│── index.html
-│── style.css
-│── assets/
-│   ├── images/
-│   └── icons/
+├── index.html
+├── browse.html
+├── watch.html
+├── style.css
+├── script.js
+└── assets/
+    └── images/
 ```
 
----
+## Getting Started
 
-## 🧩 What I Learned
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/netflix-ui-clone.git
+   ```
+2. Open the project folder.
+3. Open `index.html` in your browser to explore the site.
 
-* Translating real-world UI into code
-* Writing structured and reusable CSS
-* Handling responsiveness across screen sizes
-* Improving visual accuracy and spacing consistency
+## Usage
 
----
+- Visit the home page to explore the product experience
+- Open the Browse page to search and view featured titles
+- Click any card to open the watch page for that title
 
-## 🚧 Limitations
+## Screenshots
 
-* Static UI (no backend or interactivity)
-* No authentication or streaming functionality
+You can preview the UI locally by opening the HTML files in a browser.
 
----
+## Author
 
-## 🔮 Future Improvements
+Vaibhav Gupta
 
-* Add JavaScript for interactivity
-* Implement animations and transitions
-* Convert into a full-stack application
+## License
 
----
+This project is open-source and available under the MIT License.
 
-## 📌 Author
-
-**Vaibhav Gupta**
-
----

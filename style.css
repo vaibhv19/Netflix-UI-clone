@@ -3,11 +3,23 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: black;
+    background: linear-gradient(135deg, #050505 0%, #1b1b1b 100%);
+    color: #fff;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: 0 auto;
 }
 
 .main {
@@ -15,12 +27,12 @@ body {
     background-position: center center;
     background-size: max(1200px, 100vw);
     background-repeat: no-repeat;
-    height: 644px;
+    min-height: 644px;
     position: relative;
 }
 
 .main .box {
-    height: 644px;
+    height: 100%;
     width: 100%;
     opacity: 0.69;
     position: absolute;
@@ -38,7 +50,6 @@ nav {
 }
 
 nav img {
-    color: red;
     width: 130px;
     position: relative;
     z-index: 10;
@@ -51,7 +62,7 @@ nav button {
 
 .hero {
     font-family: 'Martel Sans', sans-serif;
-    height: calc(100% - 100px);
+    min-height: calc(100% - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,25 +70,25 @@ nav button {
     color: white;
     position: relative;
     gap: 23px;
-    padding: 0 30px;
+    padding: 0 30px 3rem;
 }
 
-.hero> :nth-child(1) {
+.hero > :nth-child(1) {
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    font-size: 48px;
+    font-size: clamp(2rem, 4vw, 3rem);
     text-align: center;
 }
 
-.hero> :nth-child(2) {
+.hero > :nth-child(2) {
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.25rem;
     text-align: center;
 }
 
-.hero> :nth-child(3) {
+.hero > :nth-child(3) {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -89,28 +100,31 @@ nav button {
 }
 
 .btn {
-    padding: 3px 8px;
+    padding: 0.7rem 1.2rem;
     font-weight: 400;
     color: white;
     background-color: rgba(248, 243, 243, 0.021);
     border-radius: 4px;
     border: 1px solid white;
     cursor: pointer;
-
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-red {
-    background-color: red;
+    background-color: #e50914;
     color: white;
-    padding: 3px 24px;
-    font-size: 20px;
-    border-radius: 4px;
-    font-weight: 400;
+    border: none;
 }
 
 .btn-red-sm {
-    background-color: red;
+    background-color: #e50914;
     color: white;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
 }
 
 .hero-buttons {
@@ -118,15 +132,17 @@ nav button {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .main input {
-    padding: 7px 101px 8px 14px;
+    padding: 0.8rem 1rem;
     color: white;
-    font-size: 12px;
+    font-size: 0.95rem;
     border-radius: 4px;
     background-color: rgba(23, 23, 23, 0.7);
     border: 1px solid rgba(246, 238, 238, 0.5);
+    min-width: min(320px, 60vw);
 }
 
 .first {
@@ -135,11 +151,10 @@ nav button {
     max-width: 70vw;
     margin: auto;
     color: white;
-    justify-content: center;
     align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
 }
-
-
 
 .secImg {
     position: relative;
@@ -158,27 +173,26 @@ nav button {
     width: 555px;
 }
 
-section.first>div {
+section.first > div {
     display: flex;
     flex-direction: column;
     padding: 34px 0;
 }
 
-section.first>div :nth-child(1) {
-    font-size: 48px;
+section.first > div :nth-child(1) {
+    font-size: 2.5rem;
     font-weight: bolder;
 }
 
-
-section.first>div :nth-child(2) {
-    font-size: 24px;
-
+section.first > div :nth-child(2) {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #d8d8d8;
 }
-
 
 .faq h2 {
     text-align: center;
-    font-size: 48px;
+    font-size: 2.5rem;
 }
 
 .faq {
@@ -198,7 +212,7 @@ section.first>div :nth-child(2) {
 
 .faqbox {
     transition: all 1s ease-out;
-    font-size: 24px;
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
     background-color: #2d2d2d;
@@ -206,6 +220,210 @@ section.first>div :nth-child(2) {
     max-width: 60vw;
     margin: 34px auto;
     cursor: pointer;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: rgba(0, 0, 0, 0.82);
+    backdrop-filter: blur(10px);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.brand img {
+    width: 44px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #d8d8d8;
+    text-decoration: none;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-cta {
+    color: #fff;
+    text-decoration: none;
+    background: #e50914;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+}
+
+.page-hero {
+    padding: 4rem 0 3rem;
+    background: radial-gradient(circle at top, rgba(229,9,20,0.25), transparent 45%);
+}
+
+.browse-hero h1,
+.watch-showcase h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.page-hero p,
+.watch-copy p {
+    color: #d8d8d8;
+    line-height: 1.7;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-size: 0.8rem;
+    color: #ff6b6b;
+    margin-bottom: 0.8rem;
+}
+
+.search-shell {
+    margin-top: 1.5rem;
+}
+
+.search-shell input {
+    width: min(100%, 420px);
+    padding: 0.9rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.section {
+    padding: 2rem 0 4rem;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+}
+
+.section-heading p {
+    color: #aaa;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+}
+
+.movie-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px);
+    border-color: #e50914;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.movie-card-content {
+    padding: 1rem;
+}
+
+.movie-accent {
+    color: #ff6b6b;
+    margin-bottom: 0.35rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.movie-card h3 {
+    margin-bottom: 0.4rem;
+}
+
+.movie-card p {
+    color: #d8d8d8;
+    margin-bottom: 0.8rem;
+}
+
+.card-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #d8d8d8;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+.watch-showcase {
+    padding: 3rem 0 4rem;
+}
+
+.watch-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.watch-meta {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 1.5rem;
+}
+
+.watch-meta span {
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.08);
+    color: #e8e8e8;
+}
+
+.watch-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.watch-card img {
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 footer {
@@ -219,18 +437,14 @@ footer .questions {
     padding: 34px 0;
 }
 
-
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
 
-
-
-@media screen and (max-width: 1300px) {
-
-    nav{
+@media screen and (max-width: 900px) {
+    nav {
         max-width: 90vw;
     }
 
@@ -246,15 +460,15 @@ footer .questions {
         width: 305px;
     }
 
-    .hero> :nth-child(1) {
+    .hero > :nth-child(1) {
         font-size: 32px;
     }
 
-    .hero> :nth-child(2) {
+    .hero > :nth-child(2) {
         font-size: 18px;
     }
 
-    .hero> :nth-child(3) {
+    .hero > :nth-child(3) {
         font-size: 18px;
     }
 
@@ -276,16 +490,29 @@ footer .questions {
         padding: 75px 0;
     }
 
-    .footer-item{
+    .footer-item {
         align-items: center;
     }
- 
 
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .watch-layout {
+        grid-template-columns: 1fr;
+    }
 }
 
+@media screen and (max-width: 700px) {
+    .top-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-
-@media screen and (max-width: 1300px) {
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
 
     .footer {
         display: grid;
@@ -293,7 +520,6 @@ footer .questions {
         gap: 25px;
     }
 }
-
 
 .footer a {
     font-size: 14px;

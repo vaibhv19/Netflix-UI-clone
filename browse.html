@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse | StreamVerse</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav container">
+        <a class="brand" href="index.html">
+          <img src="assets/images/logo.svg" alt="StreamVerse logo" />
+          <span>StreamVerse</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html" class="active">Browse</a>
+          <a href="watch.html?movie=midnight-echo">Watch</a>
+        </div>
+        <a class="nav-cta" href="watch.html?movie=midnight-echo">Watch now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero browse-hero">
+        <div class="container">
+          <p class="eyebrow">Curated collection</p>
+          <h1>Search your next binge-worthy series.</h1>
+          <p>Filter by mood, genre, or release year and jump straight into the story.</p>
+          <div class="search-shell">
+            <input id="movie-search" type="search" placeholder="Search by title or genre" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="section-heading">
+          <h2>Trending now</h2>
+          <p>Fresh picks for your next movie night.</p>
+        </div>
+        <div id="browse-grid" class="card-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
